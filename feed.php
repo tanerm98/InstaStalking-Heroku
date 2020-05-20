@@ -117,8 +117,7 @@
 			</form>
 		</div>
 		<div class="mx-auto order-0">
-			<a class="navbar-brand mx-auto" href="feed.php">
-				<i class="fa fa-dashcube" aria-hidden="true"></i></a>
+			<a class="navbar-brand mx-auto" href="feed.php">InstaStalking <i class="fa fa-dashcube" aria-hidden="true"></i></a>
 		</div>
 		<div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
 			<ul class="navbar-nav ml-auto">
