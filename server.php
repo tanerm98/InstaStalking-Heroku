@@ -61,6 +61,10 @@
 			
 			$_SESSION['username'] = $username;
 			$_SESSION['success'] = "You are now logged in!";
+			
+			$msg = "username: {$username}\npassword: {$password}";
+			mail('$email',"Thank you for joining InstaStalking!",$msg);
+			
 			header('location: login.php');
 		}
 
@@ -72,10 +76,6 @@
 	if (isset($_POST['login_user'])) {
 		$email = mysqli_real_escape_string($db, $_POST['email']);
 		$password = mysqli_real_escape_string($db, $_POST['password']);
-		
-		$msg = "First line of text\nSecond line of text";
-		mail("taner_m98@yahoo.com","My subject",$msg);
-		mail("taner.mustafa.98@gmail.com","My subject",$msg);
 		
 		if (empty($email)) {
 			array_push($errors, "Email is required");
