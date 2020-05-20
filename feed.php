@@ -117,7 +117,8 @@
 			</form>
 		</div>
 		<div class="mx-auto order-0">
-			<a class="navbar-brand mx-auto" href="feed.php">InstaStalking <i class="fa fa-dashcube" aria-hidden="true"></i></a>
+			<a class="navbar-brand mx-auto" href="feed.php">
+				<i class="fa fa-dashcube" aria-hidden="true"></i></a>
 		</div>
 		<div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
 			<ul class="navbar-nav ml-auto">
@@ -142,7 +143,7 @@
         $id_img = $row['id_img'];
         $id_user = $row['id_user'];
         $nr_comm = mysqli_query($con, "SELECT COUNT(*) from comments where id_img = '$id_img'");
-        $comm =  mysqli_query($con, "SELECT name, username, U.id_user, comm, id_comm, date FROM instastalking.comments C join instastalking.users U on C.id_user = U.id_user where id_img = '$id_img'");
+        $comm =  mysqli_query($con, "SELECT name, username, U.id_user, comm, id_comm, date FROM comments C join users U on C.id_user = U.id_user where id_img = '$id_img'");
 
         $profile =  mysqli_query($con, "SELECT path FROM images where id_user ='$id_user' and profile ='1' ");
         $res = mysqli_fetch_array($profile);
